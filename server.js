@@ -8,9 +8,9 @@ const PORT = 4000; // Choose any port number you prefer
 app.use(express.json());
 app.use(cors());
 
-app.post('/api', async (req, res) => {
-  const userMessage = req.payload.user_question;
-  const API_URL = "https://people-analytics-jine.hf.space/chatbot/";
+app.post('/', async (req, res) => {
+  const userMessage = req.body.user_question;
+  const API_URL = "https://people-analytics-jine.hf.space/chatbot";
 
   const myHeaders = new fetch.Headers();
   myHeaders.append("Content-Type", "application/json");
