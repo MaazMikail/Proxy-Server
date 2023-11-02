@@ -1,6 +1,6 @@
 import express from 'express';
 import fetch from 'node-fetch';
-const cors = import('cors');
+const cors = require('cors');
 
 const app = express();
 const PORT = 4000; // Choose any port number you prefer
