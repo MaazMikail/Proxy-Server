@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.post('/api', async (req, res) => {
-  const userMessage = req.user_question;
+  const userMessage = req.payload.user_question;
   const API_URL = "https://people-analytics-jine.hf.space/chatbot/";
 
   const myHeaders = new fetch.Headers();
